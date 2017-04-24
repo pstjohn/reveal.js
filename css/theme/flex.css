@@ -1,0 +1,671 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i);
+section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
+  color: #fff; }
+
+.reveal .slides section {
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #fff;
+  background-color: #fff; }
+
+.reveal {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: #404040; }
+
+::selection {
+  color: #fff;
+  background: #d33682;
+  text-shadow: none; }
+
+::-moz-selection {
+  color: #fff;
+  background: #d33682;
+  text-shadow: none; }
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 1.6em; }
+
+.reveal h2 {
+  font-size: 1.6em; }
+
+.reveal h3 {
+  font-size: 1.3em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q,
+.reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #268bd2;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #78b9e6;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #1a6091; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #404040;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #268bd2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #268bd2; }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #268bd2; }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #268bd2; }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #268bd2; }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #78b9e6; }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #78b9e6; }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #78b9e6; }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #78b9e6; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #268bd2;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+.reveal .slides section {
+  flex-direction: column;
+  align-items: flex-start; }
+
+.reveal .slides h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; }
+
+div.grid {
+  display: flex;
+  width: 100%;
+  margin: -0.5em 0 0 -0.5em; }
+
+.reveal div.col {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  max-width: 100%; }
+  .reveal div.col p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col ol, .reveal div.col dl, .reveal div.col ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-1 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 8.33333333%;
+  flex-basis: 8.33333333%;
+  max-width: 8.33333333%; }
+  .reveal div.col-1 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-1 ol, .reveal div.col-1 dl, .reveal div.col-1 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-2 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 16.66666667%;
+  flex-basis: 16.66666667%;
+  max-width: 16.66666667%; }
+  .reveal div.col-2 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-2 ol, .reveal div.col-2 dl, .reveal div.col-2 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-3 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%; }
+  .reveal div.col-3 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-3 ol, .reveal div.col-3 dl, .reveal div.col-3 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-4 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 33.33333333%;
+  flex-basis: 33.33333333%;
+  max-width: 33.33333333%; }
+  .reveal div.col-4 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-4 ol, .reveal div.col-4 dl, .reveal div.col-4 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-5 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 41.66666667%;
+  flex-basis: 41.66666667%;
+  max-width: 41.66666667%; }
+  .reveal div.col-5 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-5 ol, .reveal div.col-5 dl, .reveal div.col-5 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-6 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%; }
+  .reveal div.col-6 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-6 ol, .reveal div.col-6 dl, .reveal div.col-6 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-7 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 58.33333333%;
+  flex-basis: 58.33333333%;
+  max-width: 58.33333333%; }
+  .reveal div.col-7 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-7 ol, .reveal div.col-7 dl, .reveal div.col-7 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-8 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 66.66666667%;
+  flex-basis: 66.66666667%;
+  max-width: 66.66666667%; }
+  .reveal div.col-8 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-8 ol, .reveal div.col-8 dl, .reveal div.col-8 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-9 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%; }
+  .reveal div.col-9 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-9 ol, .reveal div.col-9 dl, .reveal div.col-9 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-10 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 83.33333333%;
+  flex-basis: 83.33333333%;
+  max-width: 83.33333333%; }
+  .reveal div.col-10 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-10 ol, .reveal div.col-10 dl, .reveal div.col-10 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-11 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 91.66666667%;
+  flex-basis: 91.66666667%;
+  max-width: 91.66666667%; }
+  .reveal div.col-11 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-11 ol, .reveal div.col-11 dl, .reveal div.col-11 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.col-12 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%; }
+  .reveal div.col-12 p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em; }
+  .reveal div.col-12 ol, .reveal div.col-12 dl, .reveal div.col-12 ul {
+    margin: .5em 0.5em 0.5em 1.4em; }
+
+.reveal div.noshadow {
+  background: none;
+  border-radius: none; }
+
+.reveal .slide-number {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  color: #404040;
+  font-size: 0.4em;
+  min-width: 2em;
+  text-align: center; }
+
+.reveal section img {
+  display: block;
+  margin: 0px;
+  background: none;
+  border: none;
+  box-shadow: none; }
+
+.reveal section img.img-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal figure {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center; }
+
+.reveal figure img {
+  align-self: center; }
+
+.reveal .Notice {
+  background-color: #edffdb;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: .9em;
+  margin-bottom: var(--space);
+  padding: 1.2em 1.5em; }
+
+.reveal ol, .reveal dl, .reveal ul {
+  margin: 0 0em 0em 1.4em; }
+
+.reveal li {
+  padding-left: 0.5em; }
+
+.reveal ul ul {
+  padding-top: .5em; }
+
+.reveal section.slide > footer,
+div.footer {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(147, 128, 108, 0.1);
+  color: #93a1a1;
+  font-size: 0.5em;
+  text-align: left;
+  font-weight: 300;
+  margin-top: auto;
+  margin-bottom: .8em;
+  padding: .7em 1em .6em 1em; }
+  .reveal section.slide > footer strong,
+  div.footer strong {
+    font-weight: 600; }
+  .reveal section.slide > footer p,
+  div.footer p {
+    margin: 0; }

@@ -1,0 +1,278 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i);
+
+// Solarized colors
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+$lightgray: hsla(31,15%,50%,.1);
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Open Sans', sans-serif;
+$mainColor: #404040;
+$headingFont: 'Open Sans', sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+
+$mainFontSize: 30px;
+$heading1Size: 1.6em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+.reveal .slides section {
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal .slides section {
+  flex-direction: column;
+  align-items: flex-start;
+  }
+
+.reveal .slides h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  }
+
+div.grid {
+  display: flex;
+  width: 100%;
+  margin: -0.5em 0 0 -0.5em;
+}
+
+@mixin shadow {
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+          border-radius: 10px;
+  background: $lightgray;
+}
+
+@mixin grid-cell {
+  @include shadow;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin: 0.5em 0 0 0.5em;
+
+  p {
+    align-self: flex-start;
+    text-align: left;
+    width: auto;
+    margin: .5em;
+    }
+
+  ol, dl, ul {
+    margin: .5em 0.5em 0.5em 1.4em;
+  }
+}
+
+
+.reveal div.col {
+  @include grid-cell;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.reveal div.col-1 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 8.33333333%;
+  flex-basis: 8.33333333%;
+  max-width: 8.33333333%;
+}
+
+.reveal div.col-2 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 16.66666667%;
+  flex-basis: 16.66666667%;
+  max-width: 16.66666667%;
+}
+
+.reveal div.col-3 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.reveal div.col-4 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 33.33333333%;
+  flex-basis: 33.33333333%;
+  max-width: 33.33333333%;
+}
+
+.reveal div.col-5 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 41.66666667%;
+  flex-basis: 41.66666667%;
+  max-width: 41.66666667%;
+}
+
+.reveal div.col-6 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.reveal div.col-7 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 58.33333333%;
+  flex-basis: 58.33333333%;
+  max-width: 58.33333333%;
+}
+
+.reveal div.col-8 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 66.66666667%;
+  flex-basis: 66.66666667%;
+  max-width: 66.66666667%;
+}
+
+.reveal div.col-9 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.reveal div.col-10 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 83.33333333%;
+  flex-basis: 83.33333333%;
+  max-width: 83.33333333%;
+}
+
+.reveal div.col-11 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 91.66666667%;
+  flex-basis: 91.66666667%;
+  max-width: 91.66666667%;
+}
+
+.reveal div.col-12 {
+  @include grid-cell;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.reveal div.noshadow {
+  background: none;
+  border-radius: none;
+}
+
+
+.reveal .slide-number {
+  @include shadow;
+  color: $mainColor;
+  font-size: 0.4em;
+  min-width: 2em;
+  text-align: center;
+}
+
+.reveal section img {
+  display: block;
+  margin: 0px;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.reveal section img.img-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal figure {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  }
+
+.reveal figure img {
+  align-self: center;
+  }
+
+.reveal .Notice {
+  background-color: hsl(90, 100%, 93%);
+  color: hsla(0, 0%, 0%, .6);
+  font-size: .9em;
+  margin-bottom: var(--space);
+  padding: 1.2em 1.5em;
+  }
+
+.reveal ol, .reveal dl, .reveal ul {
+  margin: 0 0em 0em 1.4em;
+}
+
+.reveal li {
+  padding-left: 0.5em;
+}
+
+.reveal ul ul {
+  padding-top: .5em;
+  }
+
+.reveal section.slide > footer,
+div.footer {
+  @include shadow;
+  color: #93a1a1;
+  font-size: 0.5em;
+  text-align: left;
+  font-weight: 300;
+  margin-top: auto;
+  margin-bottom: .8em;
+  padding: .7em 1em .6em 1em;
+
+  strong {
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0;
+  }
+  
+}
+
