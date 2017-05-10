@@ -65,8 +65,11 @@ section.has-dark-background {
   align-items: flex-start;
   }
 
-.reveal .slides h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+.reveal .slides {
+	h1, h2, h3, h4, h5, h6 {
+	  font-weight: 600;
+	  text-align: left;
+	  }
   }
 
 div.grid {
@@ -90,17 +93,15 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
 
   p {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em;
+    margin-top: 0;
     }
 
-  ol, dl, ul {
-    margin: .5em 0.5em 0.5em 1.4em;
-  }
 }
 
 
@@ -225,14 +226,17 @@ div.grid {
 }
 
 .reveal figure {
-  display: flex;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  display: flex;
   justify-content: center;
+  align-items: center;
   }
 
 .reveal figure img {
-  align-self: center;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
   }
 
 .reveal .Notice {
@@ -249,11 +253,8 @@ div.grid {
 
 .reveal li {
   padding-left: 0.5em;
+  padding-bottom: 0.25em;
 }
-
-.reveal ul ul {
-  padding-top: .5em;
-  }
 
 .reveal section.slide > footer,
 div.footer {
@@ -275,4 +276,9 @@ div.footer {
   }
   
 }
+
+.reveal .slides p {
+  text-align: left;
+  }
+
 

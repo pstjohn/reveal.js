@@ -302,8 +302,9 @@ body {
   flex-direction: column;
   align-items: flex-start; }
 
-.reveal .slides h1, h2, h3, h4, h5, h6 {
-  font-weight: 600; }
+.reveal .slides h1, .reveal .slides h2, .reveal .slides h3, .reveal .slides h4, .reveal .slides h5, .reveal .slides h6 {
+  font-weight: 600;
+  text-align: left; }
 
 div.grid {
   display: flex;
@@ -321,6 +322,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -331,9 +333,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col ol, .reveal div.col dl, .reveal div.col ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-1 {
   -webkit-border-radius: 10px;
@@ -346,6 +346,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 8.33333333%;
   flex-basis: 8.33333333%;
   max-width: 8.33333333%; }
@@ -353,9 +354,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-1 ol, .reveal div.col-1 dl, .reveal div.col-1 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-2 {
   -webkit-border-radius: 10px;
@@ -368,6 +367,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 16.66666667%;
   flex-basis: 16.66666667%;
   max-width: 16.66666667%; }
@@ -375,9 +375,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-2 ol, .reveal div.col-2 dl, .reveal div.col-2 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-3 {
   -webkit-border-radius: 10px;
@@ -390,6 +388,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
   max-width: 25%; }
@@ -397,9 +396,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-3 ol, .reveal div.col-3 dl, .reveal div.col-3 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-4 {
   -webkit-border-radius: 10px;
@@ -412,6 +409,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 33.33333333%;
   flex-basis: 33.33333333%;
   max-width: 33.33333333%; }
@@ -419,9 +417,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-4 ol, .reveal div.col-4 dl, .reveal div.col-4 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-5 {
   -webkit-border-radius: 10px;
@@ -434,6 +430,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 41.66666667%;
   flex-basis: 41.66666667%;
   max-width: 41.66666667%; }
@@ -441,9 +438,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-5 ol, .reveal div.col-5 dl, .reveal div.col-5 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-6 {
   -webkit-border-radius: 10px;
@@ -456,6 +451,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
   max-width: 50%; }
@@ -463,9 +459,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-6 ol, .reveal div.col-6 dl, .reveal div.col-6 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-7 {
   -webkit-border-radius: 10px;
@@ -478,6 +472,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 58.33333333%;
   flex-basis: 58.33333333%;
   max-width: 58.33333333%; }
@@ -485,9 +480,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-7 ol, .reveal div.col-7 dl, .reveal div.col-7 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-8 {
   -webkit-border-radius: 10px;
@@ -500,6 +493,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 66.66666667%;
   flex-basis: 66.66666667%;
   max-width: 66.66666667%; }
@@ -507,9 +501,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-8 ol, .reveal div.col-8 dl, .reveal div.col-8 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-9 {
   -webkit-border-radius: 10px;
@@ -522,6 +514,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 75%;
   flex-basis: 75%;
   max-width: 75%; }
@@ -529,9 +522,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-9 ol, .reveal div.col-9 dl, .reveal div.col-9 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-10 {
   -webkit-border-radius: 10px;
@@ -544,6 +535,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 83.33333333%;
   flex-basis: 83.33333333%;
   max-width: 83.33333333%; }
@@ -551,9 +543,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-10 ol, .reveal div.col-10 dl, .reveal div.col-10 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-11 {
   -webkit-border-radius: 10px;
@@ -566,6 +556,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 91.66666667%;
   flex-basis: 91.66666667%;
   max-width: 91.66666667%; }
@@ -573,9 +564,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-11 ol, .reveal div.col-11 dl, .reveal div.col-11 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.col-12 {
   -webkit-border-radius: 10px;
@@ -588,6 +577,7 @@ div.grid {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
+  padding: .5em;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   max-width: 100%; }
@@ -595,9 +585,7 @@ div.grid {
     align-self: flex-start;
     text-align: left;
     width: auto;
-    margin: .5em; }
-  .reveal div.col-12 ol, .reveal div.col-12 dl, .reveal div.col-12 ul {
-    margin: .5em 0.5em 0.5em 1.4em; }
+    margin-top: 0; }
 
 .reveal div.noshadow {
   background: none;
@@ -625,13 +613,16 @@ div.grid {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal figure {
-  display: flex;
-  width: 100%;
   height: 100%;
-  justify-content: center; }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .reveal figure img {
-  align-self: center; }
+  height: 100%;
+  width: 100%;
+  object-fit: contain; }
 
 .reveal .Notice {
   background-color: #edffdb;
@@ -644,10 +635,8 @@ div.grid {
   margin: 0 0em 0em 1.4em; }
 
 .reveal li {
-  padding-left: 0.5em; }
-
-.reveal ul ul {
-  padding-top: .5em; }
+  padding-left: 0.5em;
+  padding-bottom: 0.25em; }
 
 .reveal section.slide > footer,
 div.footer {
@@ -669,3 +658,6 @@ div.footer {
   .reveal section.slide > footer p,
   div.footer p {
     margin: 0; }
+
+.reveal .slides p {
+  text-align: left; }
