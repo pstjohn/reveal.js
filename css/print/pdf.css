@@ -84,6 +84,10 @@ ul, ol, div, p {
 	page-break-after: always;
 }
 
+.reveal .slides .pdf-page section {
+  display: flex !important;
+  }
+
 .reveal .slides section {
 	visibility: visible !important;
 	display: block !important;
