@@ -13,7 +13,8 @@
 // ---------------------------------------------
 
 // Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i);
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i);
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark|Open+Sans:300,300i,400,400i,600,600i,700,700i');
 
 // Solarized colors
 $yellow:    #b58900;
@@ -29,7 +30,7 @@ $lightgray: hsla(31,15%,50%,.1);
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Open Sans', sans-serif;
 $mainColor: #404040;
-$headingFont: 'Open Sans', sans-serif;
+$headingFont: 'Palanquin Dark', sans-serif;
 $headingColor: #000;
 $headingTextShadow: none;
 $headingTextTransform: none;
@@ -38,7 +39,7 @@ $linkColor: $blue;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: $magenta;
 
-$mainFontSize: 30px;
+$mainFontSize: 35px;
 $heading1Size: 1.6em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
@@ -66,6 +67,12 @@ section.has-dark-background {
   align-items: flex-start;
   }
 
+
+.reveal .slides section.center,
+.reveal .slides section section.center, {
+  justify-content: center;
+  }
+
 .reveal .slides {
 	h1, h2, h3, h4, h5, h6 {
 	  font-weight: 600;
@@ -87,19 +94,22 @@ div.grid {
   background: $lightgray;
 }
 
-@mixin grid-cell {
+div .shadow {
   @include shadow;
+  padding: 0.5em;
+  }
+
+@mixin grid-cell {
   display: flex;
   flex-direction: column;
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
+  // padding: .5em;
 
   p {
     align-self: flex-start;
     text-align: left;
-    width: auto;
     margin-top: 0;
     }
 
@@ -206,14 +216,6 @@ div.grid {
 }
 
 
-.reveal .slide-number {
-  @include shadow;
-  color: $mainColor;
-  font-size: 0.4em;
-  min-width: 2em;
-  text-align: center;
-}
-
 .reveal section img {
   display: block;
   margin: 0px;
@@ -230,8 +232,14 @@ div.grid {
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  figcaption {
+    font-weight: 600;
+  }
+
   }
 
 .reveal figure img {
@@ -257,29 +265,45 @@ div.grid {
   padding-bottom: 0.25em;
 }
 
-.reveal section.slide > footer,
-div.footer {
+@mixin shadow-footer {
   @include shadow;
   color: #93a1a1;
   font-size: 0.5em;
-  text-align: left;
   font-weight: 300;
-  margin-top: auto;
-  margin-bottom: .8em;
-  padding: .7em 1em .6em 1em;
+  font-family: "Open Sans", "sans-serif";
 
   strong {
     font-weight: 600;
   }
 
+  }
+
+.reveal .slide-number {
+  @include shadow-footer;
+  font-size: 0.4em;
+  min-width: 2em;
+  text-align: center;
+}
+
+
+
+.reveal section.slide > footer,
+.reveal section.slide > section.level2 > footer,
+div.footer {
+  @include shadow-footer;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: .8em;
+  padding: .7em 1em .6em 1em;
+
   p {
     margin: 0;
   }
-  
 }
 
 .reveal .slides p {
   text-align: left;
+  width:100%;
   }
 
 div#refs {
@@ -295,3 +319,62 @@ div#refs {
 .reveal code {
   font-family: Consolas, monospace;
   }
+
+#title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+
+  first-child {
+    display: inline-block;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+    text-align: inherit;
+  }
+
+  img {
+    margin-bottom: 20px;
+    display: inline;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.reveal .slides .text-center p {
+  text-align: center;
+  }
+
+.reveal .font-xx-small {
+    font-size: .4em;
+}
+
+.reveal .font-x-small {
+    font-size: .6em;
+}
+
+.reveal .font-small {
+    font-size: .8em;
+}
+
+.reveal .font-medium {
+    font-size: 1em;
+}
+
+.reveal .font-large {
+    font-size: 1.2em;
+}
+
+.reveal .font-x-large {
+    font-size: 1.4em;
+}
+
+.reveal .font-xx-large{
+    font-size: 1.6em;
+}
+
