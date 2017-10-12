@@ -622,7 +622,8 @@ div .shadow {
   padding: 1.2em 1.5em; }
 
 .reveal ol, .reveal dl, .reveal ul {
-  margin: 0 0em 0em 1.4em; }
+  margin: 0 0em 0em 1.4em;
+  display: block; }
 
 .reveal section.slide > ul {
   max-width: 70%;
