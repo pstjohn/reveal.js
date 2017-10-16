@@ -688,7 +688,8 @@ div#refs {
 .reveal pre {
   box-shadow: none;
   background: #f5f2f0;
-  padding: 25px; }
+  padding: 25px;
+  width: 100%; }
 
 .reveal code {
   font-family: Consolas, monospace; }
