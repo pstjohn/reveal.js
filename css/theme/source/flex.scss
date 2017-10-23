@@ -342,11 +342,13 @@ div#refs {
   box-shadow: none;
   background: #f5f2f0;
   padding: 25px;
-  width: 100%;
+  width: auto;
   }
 
-.reveal code {
+.reveal pre code {
   font-family: Consolas, monospace;
+  overflow: scroll;
+  max-height: 600px;
   }
 
 #title {
