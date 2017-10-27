@@ -676,6 +676,10 @@ div.footer {
   .reveal section.slide > section.level2 > footer p,
   div.footer p {
     margin: 0; }
+  .reveal section.slide > footer span.citation,
+  .reveal section.slide > section.level2 > footer span.citation,
+  div.footer span.citation {
+    display: block; }
 
 .reveal .slides p {
 <<<<<<< HEAD
