@@ -232,8 +232,48 @@ div .shadow {
 }
 
 
-.reveal section img {
+.reveal section table {
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 0.5em;
+  table-layout: fixed;
+  
+  thead {
+    border-bottom: 1px solid black;
+    vertical-align: bottom;
+    }
+
+  tr, th, td {
+    text-align: right;
+    vertical-align: middle;
+    padding: 0.5em 0.5em;
+    line-height: 1.0;
+    white-space: nowrap;
+    max-width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: none;
+    }
+
+  th {
+    font-weight: bold;
+    }
+
+  tbody tr:nth-child(odd) {
+    background: #f5f5f5;
+    }
+    }
+
+
+.reveal section figure img {
   display: block;
+  }
+
+.reveal section img {
   margin: 0px;
   background: none;
   border: none;
