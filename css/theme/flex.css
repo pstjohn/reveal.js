@@ -38,8 +38,8 @@ body {
   background: #d33682;
   text-shadow: none; }
 
-.reveal .slides > section,
-.reveal .slides > section > section {
+.reveal .slides section,
+.reveal .slides section > section {
   line-height: 1.3;
   font-weight: inherit; }
 
@@ -130,10 +130,6 @@ body {
 .reveal dd {
   margin-left: 40px; }
 
-.reveal q,
-.reveal blockquote {
-  quotes: none; }
-
 .reveal blockquote {
   display: block;
   position: relative;
@@ -164,7 +160,8 @@ body {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
 .reveal code {
-  font-family: monospace; }
+  font-family: monospace;
+  text-transform: none; }
 
 .reveal pre code {
   display: block;
@@ -200,10 +197,12 @@ body {
   border-bottom: none; }
 
 .reveal sup {
-  vertical-align: super; }
+  vertical-align: super;
+  font-size: smaller; }
 
 .reveal sub {
-  vertical-align: sub; }
+  vertical-align: sub;
+  font-size: smaller; }
 
 .reveal small {
   display: inline-block;
@@ -259,57 +258,36 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-.reveal .controls .navigate-left,
-.reveal .controls .navigate-left.enabled {
-  border-right-color: #268bd2; }
-
-.reveal .controls .navigate-right,
-.reveal .controls .navigate-right.enabled {
-  border-left-color: #268bd2; }
-
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #268bd2; }
-
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #268bd2; }
-
-.reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #78b9e6; }
-
-.reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #78b9e6; }
-
-.reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #78b9e6; }
-
-.reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #78b9e6; }
+.reveal .controls {
+  color: #268bd2; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.2);
+  color: #268bd2; }
 
 .reveal .progress span {
-  background: #268bd2;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: #fff; } }
 
 .reveal .slides section {
   flex-direction: column;
   align-items: flex-start; }
 
-<<<<<<< HEAD
 .reveal .slides section.center,
 .reveal .slides section section.center {
   justify-content: center; }
 
-=======
->>>>>>> figure changes
 .reveal .slides h1, .reveal .slides h2, .reveal .slides h3, .reveal .slides h4, .reveal .slides h5, .reveal .slides h6 {
   font-weight: 600;
   text-align: left; }
@@ -321,20 +299,18 @@ div.grid {
 
 .reveal div.center {
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  justify-content: center;
+  align-items: center; }
 
 div .shadow {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
   background: rgba(147, 128, 108, 0.1);
+  border-radius: 10px;
   padding: 0.5em; }
+
+span.shadow {
+  background: rgba(147, 128, 108, 0.1);
+  border-radius: 10px;
+  padding: 0.1em; }
 
 .reveal div.col {
   display: flex;
@@ -342,20 +318,12 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -ms-flex-preferred-size: 0;
   flex-basis: 0;
   max-width: 100%; }
   .reveal div.col p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-1 {
@@ -364,17 +332,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 8.33333333%;
   flex-basis: 8.33333333%;
   max-width: 8.33333333%; }
   .reveal div.col-1 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-2 {
@@ -383,17 +345,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 16.66666667%;
   flex-basis: 16.66666667%;
   max-width: 16.66666667%; }
   .reveal div.col-2 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-3 {
@@ -402,17 +358,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
   max-width: 25%; }
   .reveal div.col-3 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-4 {
@@ -421,17 +371,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 33.33333333%;
   flex-basis: 33.33333333%;
   max-width: 33.33333333%; }
   .reveal div.col-4 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-5 {
@@ -440,17 +384,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 41.66666667%;
   flex-basis: 41.66666667%;
   max-width: 41.66666667%; }
   .reveal div.col-5 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-6 {
@@ -459,17 +397,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
   max-width: 50%; }
   .reveal div.col-6 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-7 {
@@ -478,17 +410,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 58.33333333%;
   flex-basis: 58.33333333%;
   max-width: 58.33333333%; }
   .reveal div.col-7 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-8 {
@@ -497,17 +423,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 66.66666667%;
   flex-basis: 66.66666667%;
   max-width: 66.66666667%; }
   .reveal div.col-8 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-9 {
@@ -516,17 +436,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 75%;
   flex-basis: 75%;
   max-width: 75%; }
   .reveal div.col-9 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-10 {
@@ -535,17 +449,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 83.33333333%;
   flex-basis: 83.33333333%;
   max-width: 83.33333333%; }
   .reveal div.col-10 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-11 {
@@ -554,17 +462,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 91.66666667%;
   flex-basis: 91.66666667%;
   max-width: 91.66666667%; }
   .reveal div.col-11 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.col-12 {
@@ -573,17 +475,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-  padding: .5em;
-  -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   max-width: 100%; }
   .reveal div.col-12 p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0; }
 
 .reveal div.noshadow {
@@ -620,6 +516,9 @@ div .shadow {
 .reveal section figure img {
   display: block; }
 
+.reveal section p img {
+  display: block; }
+
 .reveal section img {
   margin: 0px;
   background: none;
@@ -633,16 +532,14 @@ div .shadow {
   height: 100%;
   width: 100%;
   display: flex;
-<<<<<<< HEAD
   flex-direction: column;
   justify-content: center;
   align-items: center; }
   .reveal figure figcaption {
     font-weight: 600; }
-=======
-  justify-content: center;
-  align-items: center; }
->>>>>>> figure changes
+
+.reveal figure.tight {
+  height: auto; }
 
 .reveal figure img {
   height: 100%;
@@ -670,14 +567,10 @@ div .shadow {
 .reveal li {
   padding-left: 0.5em;
   padding-bottom: 0.25em; }
-<<<<<<< HEAD
 
 .reveal .slide-number {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
   background: rgba(147, 128, 108, 0.1);
+  border-radius: 10px;
   color: #93a1a1;
   font-size: 0.5em;
   font-weight: 300;
@@ -687,17 +580,12 @@ div .shadow {
   text-align: center; }
   .reveal .slide-number strong {
     font-weight: 600; }
-=======
->>>>>>> figure changes
 
 .reveal section.slide > footer,
 .reveal section.slide > section.level2 > footer,
 div.footer {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
   background: rgba(147, 128, 108, 0.1);
+  border-radius: 10px;
   color: #93a1a1;
   font-size: 0.5em;
   font-weight: 300;
@@ -720,7 +608,6 @@ div.footer {
     display: block; }
 
 .reveal .slides p {
-<<<<<<< HEAD
   text-align: left;
   width: 100%; }
 
@@ -743,8 +630,9 @@ div#refs {
   display: flex;
   text-align: center;
   align-items: center;
-  height: 100%; }
-  #title first-child {
+  height: 100%;
+  width: 100%; }
+  #title div:first-child {
     display: inline-block;
     width: 100%; }
   #title h1 {
@@ -779,6 +667,3 @@ div#refs {
 
 .reveal .font-xx-large {
   font-size: 1.6em; }
-=======
-  text-align: left; }
->>>>>>> figure changes
