@@ -67,15 +67,12 @@ section.has-dark-background {
   align-items: flex-start;
   }
 
-<<<<<<< HEAD
 
 .reveal .slides section.center,
 .reveal .slides section section.center, {
   justify-content: center;
   }
 
-=======
->>>>>>> figure changes
 .reveal .slides {
 	h1, h2, h3, h4, h5, h6 {
 	  font-weight: 600;
@@ -96,16 +93,18 @@ div.grid {
 }
 
 @mixin shadow {
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-          border-radius: 10px;
   background: $lightgray;
+  border-radius: 10px;
 }
 
 div .shadow {
   @include shadow;
   padding: 0.5em;
+  }
+
+span.shadow {
+  @include shadow;
+  padding: 0.1em;
   }
 
 @mixin grid-cell {
@@ -114,19 +113,11 @@ div .shadow {
   flex: 1;
   width: 100%;
   margin: 0.5em 0 0 0.5em;
-<<<<<<< HEAD
   // padding: .5em;
-=======
-  padding: .5em;
->>>>>>> figure changes
 
   p {
     align-self: flex-start;
     text-align: left;
-<<<<<<< HEAD
-=======
-    width: auto;
->>>>>>> figure changes
     margin-top: 0;
     }
 
@@ -134,94 +125,79 @@ div .shadow {
 
 .reveal div.col {
   @include grid-cell;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -ms-flex-preferred-size: 0;
   flex-basis: 0;
   max-width: 100%;
 }
 
 .reveal div.col-1 {
   @include grid-cell;
-  -ms-flex-preferred-size: 8.33333333%;
   flex-basis: 8.33333333%;
   max-width: 8.33333333%;
 }
 
 .reveal div.col-2 {
   @include grid-cell;
-  -ms-flex-preferred-size: 16.66666667%;
   flex-basis: 16.66666667%;
   max-width: 16.66666667%;
 }
 
 .reveal div.col-3 {
   @include grid-cell;
-  -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
   max-width: 25%;
 }
 
 .reveal div.col-4 {
   @include grid-cell;
-  -ms-flex-preferred-size: 33.33333333%;
   flex-basis: 33.33333333%;
   max-width: 33.33333333%;
 }
 
 .reveal div.col-5 {
   @include grid-cell;
-  -ms-flex-preferred-size: 41.66666667%;
   flex-basis: 41.66666667%;
   max-width: 41.66666667%;
 }
 
 .reveal div.col-6 {
   @include grid-cell;
-  -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
   max-width: 50%;
 }
 
 .reveal div.col-7 {
   @include grid-cell;
-  -ms-flex-preferred-size: 58.33333333%;
   flex-basis: 58.33333333%;
   max-width: 58.33333333%;
 }
 
 .reveal div.col-8 {
   @include grid-cell;
-  -ms-flex-preferred-size: 66.66666667%;
   flex-basis: 66.66666667%;
   max-width: 66.66666667%;
 }
 
 .reveal div.col-9 {
   @include grid-cell;
-  -ms-flex-preferred-size: 75%;
   flex-basis: 75%;
   max-width: 75%;
 }
 
 .reveal div.col-10 {
   @include grid-cell;
-  -ms-flex-preferred-size: 83.33333333%;
   flex-basis: 83.33333333%;
   max-width: 83.33333333%;
 }
 
 .reveal div.col-11 {
   @include grid-cell;
-  -ms-flex-preferred-size: 91.66666667%;
   flex-basis: 91.66666667%;
   max-width: 91.66666667%;
 }
 
 .reveal div.col-12 {
   @include grid-cell;
-  -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   max-width: 100%;
 }
@@ -288,7 +264,6 @@ div .shadow {
   height: 100%;
   width: 100%;
   display: flex;
-<<<<<<< HEAD
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -297,10 +272,10 @@ div .shadow {
     font-weight: 600;
   }
 
-=======
-  justify-content: center;
-  align-items: center;
->>>>>>> figure changes
+  }
+
+.reveal figure.tight{
+  height: auto;
   }
 
 .reveal figure img {
@@ -336,7 +311,6 @@ div .shadow {
   padding-bottom: 0.25em;
 }
 
-<<<<<<< HEAD
 @mixin shadow-footer {
   @include shadow;
   color: #93a1a1;
@@ -359,8 +333,6 @@ div .shadow {
 
 
 
-=======
->>>>>>> figure changes
 .reveal section.slide > footer,
 .reveal section.slide > section.level2 > footer,
 div.footer {
@@ -406,8 +378,9 @@ div#refs {
   text-align: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 
-  first-child {
+  div:first-child {
     display: inline-block;
     width: 100%;
   }
@@ -458,9 +431,4 @@ div#refs {
 .reveal .font-xx-large{
     font-size: 1.6em;
 }
-
-.reveal .slides p {
-  text-align: left;
-  }
-
 
